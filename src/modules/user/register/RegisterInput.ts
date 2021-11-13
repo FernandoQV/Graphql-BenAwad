@@ -1,13 +1,15 @@
 import { Field, InputType } from "type-graphql"
 import {  IsEmail, Length  } from 'class-validator'
-import { IsEmailAlreadyExist } from "./isEmailAlreadeyExist"
+//import { IsEmailAlreadyExist } from "./isEmailAlreadeyExist"
+import { isFirstNameLength } from "./isFirstNameLength"
 
 
 @InputType()
 export class RegisterInput{
-    @Field()
     
-    @Length(1,100,{message:'No puede estar vacio este campo'})//message es para indicar el mensaje de error que se mostarara
+    //@Length(1,100,{message:'No puede estar vacio este campo'})//message es para indicar el mensaje de error que se mostarara
+    @Field()
+    @isFirstNameLength({message:'FirstName min length 6 characteres'})
     firstName: string
     
     @Field()
@@ -16,7 +18,7 @@ export class RegisterInput{
     
     @Field()
     @IsEmail()
-    @IsEmailAlreadyExist({message:`email already in used`})
+    //@IsEmailAlreadyExist({message:`email already in used`})
     email: string
     
     @Field() 
