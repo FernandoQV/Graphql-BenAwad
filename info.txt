@@ -1,0 +1,7 @@
+ts-node-dev =>reinicia mas rapido el servidor dijo ben awad en su tercer video de la serie
+
+PArapoder usar las importaciones normales
+esmoduleINtercop:true
+"allowSyntheticDefaultImports": true,
+
+apollo-server ya no necesita de formatArgumentsvalidtionError yalo tiene explicito en el campo extension
